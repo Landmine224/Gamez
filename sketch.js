@@ -44,31 +44,36 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode == 87) {
+  if (keyCode == 87 || keyCode == UP_ARROW) {
     player.move(0, -1);
   }
-  if (keyCode == 83) {
+  if (keyCode == 83 || keyCode == DOWN_ARROW) {
     player.move(0, 1);
   }
-  if (keyCode == 65) {
+  if (keyCode == 65 || keyCode == LEFT_ARROW) {
     player.move(-1, 0);
   }
-  if (keyCode == 68) {
+  if (keyCode == 68 || keyCode == RIGHT_ARROW) {
     player.move(1, 0);
+  }
+  console.log(keyCode);
+  if (keyCode == 32) {
+	player.pos.x = width/2;
+	player.pos.y = height/2;
   }
 }
 
 function keyReleased() {
-  if (keyCode == 87) {
+  if (keyCode == 87 || keyCode == UP_ARROW) {
     player.move(0, 1);
   }
-  if (keyCode == 83) {
+  if (keyCode == 83 || keyCode == DOWN_ARROW) {
     player.move(0, -1);
   }
-  if (keyCode == 65) {
+  if (keyCode == 65 || keyCode == LEFT_ARROW) {
     player.move(1, 0);
   }
-  if (keyCode == 68) {
+  if (keyCode == 68 || keyCode == RIGHT_ARROW) {
     player.move(-1, 0);
   }
 }
