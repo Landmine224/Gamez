@@ -56,7 +56,6 @@ function keyPressed() {
   if (keyCode == 68 || keyCode == RIGHT_ARROW) {
     player.move(1, 0);
   }
-  console.log(keyCode);
   if (keyCode == 32) {
 	player.pos.x = width/2;
 	player.pos.y = height/2;
